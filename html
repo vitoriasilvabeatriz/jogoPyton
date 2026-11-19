@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Floresta das Fadas Rosa 🌸</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="arcade-frame">
+    <!-- HUD Superior -->
+    <header class="hud">
+      <div class="hud-item">
+        <span class="label">VIDAS</span>
+        <span id="lives-display" class="hearts">♥♥♥</span>
+      </div>
+      <div class="hud-item">
+        <span class="label">FASE</span>
+        <span id="level-display">1-1</span>
+      </div>
+      <div class="hud-item">
+        <span class="label">PONTOS</span>
+        <span id="score-display">00000</span>
+      </div>
+      <button id="mute-btn" class="icon-btn" title="Ativar/Desativar Som">🔊</button>
+    </header>
+
+    <!-- Tela do Jogo -->
+    <div class="canvas-wrapper">
+      <canvas id="gameCanvas" width="800" height="450"></canvas>
+
+      <!-- Sobreposição (Menu / Game Over / Vitória) -->
+      <div id="overlay" class="overlay">
+        <h1 id="overlay-title">FLORESTA DAS FADAS ROSA</h1>
+        <p id="overlay-subtitle">
+          Pule na cabeça das fadinhas para espantá-las, colete morangos e chegue até a Árvore de Cristal!
+        </p>
+        <div class="controls-hint">
+          <span>⬅️ ➡️ Mover</span>
+          <span>⬆️ / ESPAÇO Pular</span>
+        </div>
+        <button id="start-btn" class="pixel-btn">JOGAR AGORA 🌸</button>
+      </div>
+    </div>
+
+    <!-- Controles Touch para Celular -->
+    <div class="touch-controls">
+      <div class="touch-left">
+        <button id="btn-left" class="touch-btn">◀</button>
+        <button id="btn-right" class="touch-btn">▶</button>
+      </div>
+      <button id="btn-jump" class="touch-btn jump-btn">PULAR ▲</button>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
